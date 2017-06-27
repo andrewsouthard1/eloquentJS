@@ -1,0 +1,43 @@
+Under the Hood of Type Coercion in JavaScript
+
+Type coercion, when JavaScript converts values at its own discretion, at first can seem like the Wild Wild West. Trust the computer? I don't think so! Like any tool though, once you can harness its power you can do some pretty cool stuff. Let's take a look at some comparisons with == and ===.
+
+5 == 5
+true
+
+'5' == 5
+true
+
+How can that be? What's JavaScript actually doing to convert string 5 to integer 5. Or is the other way around? 
+
+What about these?
+
+console.log("3" + 1)
+'31'
+
+console.log("3" - 1)
+2
+
+In the first instance, 1 is converted to a string. In the second instance "3" is converted to an integer. What's going on here? Fire up the MDN.
+
+
+
+---LOOK THAT UP-----
+
+According to the JSdocs, if a number is given first, it will convert both to numbers. String, string....
+
+------
+
+One way to use type coercion to your advantage is for null values. 0, undefined, null, and empty string count as false in JavaScript. Let's take a look at these.
+
+0 === false
+false
+
+This makes sense, === looks for the same type. 
+
+0 == false
+true
+
+With the == operator, 0 converts to false, so they are the same. This would be helpful in looking for 
+
+
