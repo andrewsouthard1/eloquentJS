@@ -52,5 +52,19 @@ console.log(isEven(50));
 console.log(isEven(75));
 console.log(isEven(-1));
 
+function countLetters(string, char){
+  var count = 0;
+  var i = 0;
+  while (i < string.length){
+    if (string.charAt(i) === char)
+      count++;
+    i++;
+  }
+  return count;
+}
+
+console.log(countLetters("BASEBALL", 'B'));
+
+
 
 
